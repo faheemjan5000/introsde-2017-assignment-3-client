@@ -6,8 +6,8 @@ Client Git riop: https://github.com/faheemjan5000/introsde-2017-assignment-3-cli
 
 Server Code done by  
 Name : Danish Asghar - Cheema  
-Email : danishasghar.cheema@unitn.it 
-Server heroku ULR: http://introsde-asgn3-server.herokuapp.com/ws/people?wsdl       
+Email : danishasghar.cheema@unitn.it  
+Server heroku ULR: http://introsde-asgn3-server.herokuapp.com/ws/people?wsdl        
 Server Git ripo: https://github.com/danishc/introsde-2017-assignment-3-server    
 
   
