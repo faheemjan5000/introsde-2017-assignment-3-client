@@ -1,0 +1,239 @@
+http://introsde-asgn3-server.herokuapp.com/ws/people?wsdl
+
+/////Method #1: readPersonList() => List<Person>
+Person -> ID: 1
+	Name: michal12 george12
+	DOB: 1980-06-20
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+	Activity -> ID: 7
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+Person -> ID: 2
+	Name: Max Fillipo
+	DOB: 1992-03-19
+	Activity -> ID: 2
+		Name: Fundraising
+		Description: Fundraising event
+		Type: CULTURE
+		Place: Trento
+		StartDate: 2018-01-16T09:00:00.0
+		Evaluatione: 6
+Person -> ID: 3
+	Name: Charli Franco
+	DOB: 1995-04-21
+	Activity -> ID: 3
+		Name: Hiking
+		Description: Hiking in monte bianco
+		Type: SPORT
+		Place: Torino
+		StartDate: 2018-01-17T09:00:00.0
+		Evaluatione: 3
+Person -> ID: 4
+	Name: Muhammad Ali
+	DOB: 1985-09-22
+	Activity -> ID: 4
+		Name: Get Together
+		Description: Alumnus Get together
+		Type: SOCIAL
+		Place: Venezia
+		StartDate: 2018-01-23T09:00:00.0
+		Evaluatione: 7
+Person -> ID: 6
+	Name: michal6 george6
+	DOB: 1980-06-20
+	Activity -> ID: 6
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+/////Method #2: readPerson(Long id) => Person | id=1 as parameter
+Person -> ID: 1
+	Name: michal12 george12
+	DOB: 1980-06-20
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+	Activity -> ID: 7
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+/////Method #3: updatePerson(Person p) => Person 
+Parameter passed ->	LastName="michal12",	FirstName="george12"
+Updated Person ->
+Person -> ID: 1
+	Name: michal12 george12
+	DOB: 1980-06-20
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+	Activity -> ID: 7
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+/////Method #4: createPerson(newPersonObject) => Person
+///Parameter passed for Person ->	LastName="michal6",	FirstName="george6"
+///Parameter passed for related Activity ->	Name="Meeting6",	Place="Povo"
+///newely generated Person with related Activity
+Person -> ID: 7
+	Name: michal6 george6
+	DOB: 1980-06-20
+	Activity -> ID: 8
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+/////Method #5: deletePerson(5) | deleted person by ID unsuccessful, no person with same ID
+
+/////Method #6: readPersonPreferences(PersonId(1), activity_type("SOCIAL")) => List<Preference>
+	Activity -> ID: 7
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+/////Method #7: readPreferences() => List<Preferences>
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+	Activity -> ID: 2
+		Name: Fundraising
+		Description: Fundraising event
+		Type: CULTURE
+		Place: Trento
+		StartDate: 2018-01-16T09:00:00.0
+		Evaluatione: 6
+	Activity -> ID: 3
+		Name: Hiking
+		Description: Hiking in monte bianco
+		Type: SPORT
+		Place: Torino
+		StartDate: 2018-01-17T09:00:00.0
+		Evaluatione: 3
+	Activity -> ID: 4
+		Name: Get Together
+		Description: Alumnus Get together
+		Type: SOCIAL
+		Place: Venezia
+		StartDate: 2018-01-23T09:00:00.0
+		Evaluatione: 7
+	Activity -> ID: 6
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+	Activity -> ID: 7
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+	Activity -> ID: 8
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+/////Method #8: readPersonPreferences(PersonId(1), activity_id(1)) => Preference
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+
+/////Method #9: savePersonPreferences(PersonId(1), newActivityObject)
+Person -> ID: 1
+	Name: michal12 george12
+	DOB: 1980-06-20
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+	Activity -> ID: 7
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+	Activity -> ID: 9
+		Name: Meeting6
+		Description: null
+		Type: WORK_MEETING
+		Place: Povo
+		StartDate: null
+		Evaluatione: 0
+
+////Method #10: updatePersonPreferences(PersonId(1), modifiedActivityObject) => Preference
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+
+////Method #11 (Extra): evaluatePersonPreferences(PersonId(1), ActivityObject, evaluationValue(9)) => Preference
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
+
+////Method #12 (Extra): getBestPersonPreference(PersonId(1) => List<Preference>
+	Activity -> ID: 1
+		Name: Meeting2
+		Description: Project meeting
+		Type: SOCIAL
+		Place: Povo
+		StartDate: 2018-01-15T09:00:00.0
+		Evaluatione: 9
