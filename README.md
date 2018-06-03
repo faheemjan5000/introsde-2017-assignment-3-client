@@ -34,3 +34,16 @@ Method #0: Print server WSDL url (one generated for you by Heroku + e.g. /ws/peo
 `Method #11: (Extra): evaluatePersonPreferences(PersonId(1), ActivityObject, evaluationValue(9)) => Preference` //it updates the activity identified with its id, related to the Person identified by {id} with the value that define a specific value of preferences    
 `Method #12 (Extra): getBestPersonPreference(PersonId(1) => List<Preference>` //it returns the best preference (or preferences if there   are more) of the Person identified by {id}  from his/her list of preferences.    
                   
+                  
+### Execution: 
+1: clone or download the code from server git repo.  
+2: run following commands on command line  
+```
+from ./src directory
+wsimport -keep http://introsde-asgn3-server.herokuapp.com/ws/people?wsdl  
+```
+```
+from ./ directory
+ant execute.client
+
+```
